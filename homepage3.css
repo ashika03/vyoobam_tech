@@ -1,0 +1,73 @@
+/* Global Styles */
+body {
+    font-family:'Times New Roman', Times, serif;
+    margin: 0;
+    background-color: #E7E1E1; /* RGB 231, 225, 225 */
+}
+header {
+    background-color: #039797; /* Main color */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+header h1{
+    font-size: 2em;
+    
+}
+/* Menu Icon */
+.menu-icon {
+    cursor: pointer;
+}
+.menu-icon div {
+    width: 35px;
+    height: 5px;
+    background-color: white;
+    margin: 4px 0;
+}
+/* Menu Sidebar */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100%;
+    font-size: 150%;
+    background-color: #039797;
+    padding-top: 20px;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+}
+
+.menu.active {
+    transform: translateX(0);
+}
+.menu a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+.menu a:hover {
+    background-color: #026b6b;
+}
+/* Icons */
+.icon-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.icon {
+    cursor: pointer;
+    color: white;
+    font-size: 2em;
+}
+main h2{
+font-size: 2em;
+text-align: left;
+margin-bottom: 10px;
+}
+main p{
+font-size: 1.5em;
+}

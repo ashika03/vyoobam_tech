@@ -1,0 +1,69 @@
+/* Basic styling and reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background-color: #E7E1E1; color: black; padding: 20px; }
+
+/* Container styling */
+.container { background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+
+/* Header styling */
+.header {
+    background-color: #039797;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+/* Section styles */
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.section h2 {
+    font-size: 1.4em;
+    color: #039797;
+    margin-bottom: 10px;
+}
+
+/* Chart styling */
+.chart-container {
+    width: 100%;
+    max-width: 700px;
+    margin: 20px auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+
+.bar {
+    width: 40%;
+    background-color: #039797;
+    color: white;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 5px 5px 0 0;
+    padding: 20px;
+    font: 1.6em;
+    font-weight: bold;
+}
+
+/* Results details */
+.result-details {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+.winning-candidate {
+    font-weight: bold;
+    color: #039797;
+    font-size: 1.2em;
+}

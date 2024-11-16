@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help & Support - KSK Voting System</title>
+    <link rel="stylesheet" href="helpsupp11.css">
+    <script>
+        // Toggle FAQ answer visibility
+        function toggleFAQ(event) {
+            const answer = event.target.nextElementSibling;
+            answer.style.display = answer.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header Section -->
+        <div class="header">
+            <h1>Help & Support - KSK Voting System</h1>
+            <p>Your guide to using the Online Voting System for KSK College of Engineering and Technology.</p>
+        </div>
+
+        <!-- FAQ Section -->
+        <div class="section">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(event)">1. How does the voting process work?</h3>
+                <p>Once logged in, navigate to the 'Election' page to view candidates and vote for each position.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(event)">2. Is my vote secure?</h3>
+                <p>Yes, the KSK Voting System uses secure protocols to ensure your vote remains confidential and tamper-proof.</p>
+            </div>
+            <div class="faq-item">
+                <h3 onclick="toggleFAQ(event)">3. How do I manage my account details?</h3>
+                <p>You can manage your account details under the 'Settings' section after logging in.</p>
+            </div>
+        </div>
+
+        <!-- Contact Support Section -->
+        <div class="section">
+            <h2>Contact Support</h2>
+            <div class="contact-info">
+                <p>If you need further assistance, feel free to reach out to our support team:</p>
+                <p>Email: support@kskvotingsystem.edu</p>
+                <p>Phone: +91-123-456-7890</p>
+            </div>
+        </div>
+
+        <!-- Report an Issue Section -->
+        <div class="section">
+            <h2>Report an Issue</h2>
+            <p>If you encounter any technical issues with the KSK Voting System, please click the button below to report it to our technical team.</p>
+            <a href="report-issue.html" class="action-btn">Report an Issue</a>
+        </div>
+
+        <!-- Terms of Service Section -->
+        <div class="section">
+            <h2>Terms of Service</h2>
+            <div class="terms-info">
+                <p>By using the KSK Voting System, you agree to abide by all terms and conditions governing its use. Unauthorized activities or abuse of the system may result in penalties as per college policies.</p>
+            </div>
+        </div>
+
+        <!-- Privacy Policy Section -->
+        <div class="section">
+            <h2>Privacy Policy</h2>
+            <div class="privacy-info">
+                <p>We are committed to protecting your privacy. The KSK Voting System ensures that all personal information remains confidential and is used solely for the purpose of facilitating the election process.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

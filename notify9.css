@@ -1,0 +1,53 @@
+        /* Basic reset and styling */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Times New Roman', Times, serif; background-color:#e7e1e1; color:black; padding: 20px; }
+
+        /* Container styling */
+        .container { background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+
+        /* Header styling */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            color: black;
+        }
+
+        /* Button styling */
+        .action-btn {
+            padding: 10px 15px;
+            color: white;
+            background-color: #039797;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .action-btn:hover {
+            background-color: #026767;
+        }
+
+        /* Notification list styling */
+        .notification {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .notification h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            color: #039797;
+        }
+
+        .notification p {
+            font-size: 1em;
+            color:black;
+          }   
+ 

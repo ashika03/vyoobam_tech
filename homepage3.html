@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ksk voting System</title>
+    <link rel="stylesheet" href="homepage3.css">
+</head>
+<body> 
+    <!-- Header Section -->
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <h1>KSK VOTING SYSTEM</h1>
+        <div class="icon-container">
+            <div class="icon" title="Notifications">🔔</div>
+            <div class="icon" title="Profile">👤</div>
+        </div>
+    </header>
+
+    <!-- Sidebar Menu -->
+    <div id="menu" class="menu">
+        <a href="#election">Election</a>
+        <a href="#results">Results</a>
+        <a href="#settings">Settings</a>
+        <a href="#support">Help & Support</a>
+    </div>
+
+    <!-- Main Content -->
+    <main style="padding: 20px;"> 
+        <h2>Hello USER!</h2>
+        <p>This is the official voting platform for the Department of Computer Science and Engineering.This online voting system is a secure and streamlined platform specifically designed for the students of KSK College of Engineering and Technology. Built to support departmental elections, the system offers a simple and efficient way for students in the Department of Computer Science and Engineering to participate in voting for roles like president, secretary, and treasurer. With a user-friendly interface, students can log in securely, view candidate profiles, and cast their votes in each category with ease. This application also ensures vote integrity by securely storing data and providing a seamless experience from login to results viewing, empowering students to make informed choices in a modern and accessible format.</p>
+    </main>
+
+    <!-- JavaScript to Toggle Menu -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

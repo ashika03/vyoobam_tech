@@ -1,0 +1,72 @@
+/* Basic reset and styling */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, sans-serif; background-color: #E7E1E1; color: black; padding: 20px; }
+
+/* Container styling */
+.container { background-color: white; padding: 20px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); }
+
+/* Header styling */
+.header {
+    background-color: #039797;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 1.8em;
+}
+
+/* Section styles */
+.section {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.section h2 {
+    font-size: 1.4em;
+    color: #039797;
+    margin-bottom: 10px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-item h3 {
+    font-size: 1.2em;
+    color: #555;
+    cursor: pointer;
+}
+
+.faq-item p {
+    font-size: 1em;
+    color: #333;
+    display: none;
+}
+
+.contact-info, .terms-info, .privacy-info {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Action button styling */
+.action-btn {
+    padding: 10px 15px;
+    color: white;
+    background-color: #039797;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.action-btn:hover {
+    background-color: #026767;
+}
