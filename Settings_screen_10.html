@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings Screen</title>
+    <link rel="stylesheet" href="Settings_screen_10.css">
+</head>
+<body>
+    <div class="settings-container">
+        <h1>Settings</h1>
+
+        <div class="menu-item" onclick="toggleSection('account-settings')">
+            Account Settings
+        </div>
+        <div class="menu-content" id="account-settings">
+            <ul>
+                <li>Update Email</li>
+                <li>Update Phone Number</li>
+                <li>Update Password</li>
+            </ul>
+        </div>
+
+        <div class="menu-item" onclick="toggleSection('security-settings')">
+            Security Settings
+        </div>
+        <div class="menu-content" id="security-settings">
+            <ul>
+                <li>Manage Two-Factor Authentication</li>
+                <li>Biometric Login</li>
+                <li>Other Security Preferences</li>
+            </ul>
+        </div>
+
+        <div class="menu-item" onclick="toggleSection('notification-preferences')">
+            Notification Preferences
+        </div>
+        <div class="menu-content" id="notification-preferences">
+            <ul>
+                <li>Set Election Reminders</li>
+                <li>Results Update Notifications</li>
+                <li>General Notifications</li>
+            </ul>
+        </div>
+
+        <div class="menu-item" onclick="toggleSection('privacy-settings')">
+            Privacy Settings
+        </div>
+        <div class="menu-content" id="privacy-settings">
+            <ul>
+                <li>Control Public Information</li>
+            </ul>
+        </div>
+
+        <div class="menu-item" onclick="toggleSection('language-theme')">
+            Language & Theme
+        </div>
+        <div class="menu-content" id="language-theme">
+            <ul>
+                <li>App Language</li>
+                <li>
+                    <label class="toggle-label">
+                        Dark Mode
+                        <input type="checkbox" id="theme-toggle" onclick="toggleTheme()">
+                        <span class="slider"></span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="menu-item" onclick="toggleSection('linkedin-accounts')">
+            LinkedIn Accounts
+        </div>
+        <div class="menu-content" id="linkedin-accounts">
+            <ul>
+                <li>Link Social Accounts</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = section.style.display === 'block' ? 'none' : 'block';
+        }
+
+        function toggleTheme() {
+            document.body.classList.toggle('dark-theme');
+        }
+    </script>
+</body>
+</html>

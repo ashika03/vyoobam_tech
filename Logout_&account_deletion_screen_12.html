@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout and Account Deletion</title>
+    <link rel="stylesheet" href="Logout_&account_deletion_screen_12.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Account Management</h1>
+
+        <div class="menu-item" onclick="showConfirmation('logout')">
+            Logout
+        </div>
+        <div id="logout-confirmation" class="confirmation-box">
+            <p>Are you sure you want to logout?</p>
+            <button class="confirm-button" onclick="logoutUser()">Yes, Logout</button>
+            <button class="cancel-button" onclick="closeConfirmation('logout')">Cancel</button>
+        </div>
+
+        <div class="menu-item" onclick="showConfirmation('delete')">
+            Delete Account
+        </div>
+        <div id="delete-confirmation" class="confirmation-box">
+            <p>Warning: Deleting your account will result in permanent data loss. Are you sure?</p>
+            <button class="confirm-button" onclick="deleteAccount()">Yes, Delete</button>
+            <button class="cancel-button" onclick="closeConfirmation('delete')">Cancel</button>
+        </div>
+
+        <!-- Additional Information -->
+        <div class="additional-info">
+            <h2>Security Tips</h2>
+            <p>Make sure to back up important data before deleting your account. For any assistance, contact support.</p>
+        </div>
+    </div>
+
+    <script>
+        function showConfirmation(type) {
+            document.getElementById(type + '-confirmation').style.display = 'block';
+        }
+
+        function closeConfirmation(type) {
+            document.getElementById(type + '-confirmation').style.display = 'none';
+        }
+
+        function logoutUser() {
+            alert('You have been logged out successfully.');
+            closeConfirmation('logout');
+            // Add actual logout logic here if needed
+        }
+
+        function deleteAccount() {
+            alert('Your account has been deleted.');
+            closeConfirmation('delete');
+            // Add actual account deletion logic here if needed
+        }
+    </script>
+</body>
+</html>

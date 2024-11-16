@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+
+        .role-section {
+            margin: 40px 0;
+        }
+
+        h1, h2 {
+            color: #039797;
+        }
+
+        .candidate {
+            display: inline-block;
+            width: 30%;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            background-color: white;
+            border-radius: 10px;
+            border: 2px solid #039797;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .candidate:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .candidate img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .candidate p {
+            color: #555;
+            margin: 5px 0;
+        }
+
+        button {
+            background-color: #039797;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #027c6e;
+        }
+
+        button.disabled {
+            background-color: #ddd;
+            cursor: not-allowed;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+
+        .success-message {
+            display: none;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        button:focus {
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Voting System</h1>
+
+        <!-- President Role -->
+        <div class="role-section">
+            <h2>President</h2>
+            <div class="candidate" id="president1">
+                <img src="https://via.placeholder.com/100" alt="Candidate 1">
+                <p>Candidate 1</p>
+                <p>Experienced in leadership</p>
+                <button class="vote-btn" data-role="president" data-candidate="1">Vote</button>
+            </div>
+            <div class="candidate" id="president2">
+                <img src="https://via.placeholder.com/100" alt="Candidate 2">
+                <p>Candidate 2</p>
+                <p>Strong vision for progress</p>
+                <button class="vote-btn" data-role="president" data-candidate="2">Vote</button>
+            </div>
+            <div class="candidate" id="president3">
+                <img src="https://via.placeholder.com/100" alt="Candidate 3">
+                <p>Candidate 3</p>
+                <p>Passionate about change</p>
+                <button class="vote-btn" data-role="president" data-candidate="3">Vote</button>
+            </div>
+        </div>
+
+        <!-- Secretary Role -->
+        <div class="role-section">
+            <h2>Secretary</h2>
+            <div class="candidate" id="secretary1">
+                <img src="https://via.placeholder.com/100" alt="Candidate 1">
+                <p>Candidate 1</p>
+                <p>Detail-oriented and organized</p>
+                <button class="vote-btn" data-role="secretary" data-candidate="1">Vote</button>
+            </div>
+            <div class="candidate" id="secretary2">
+                <img src="https://via.placeholder.com/100" alt="Candidate 2">
+                <p>Candidate 2</p>
+                <p>Efficient and reliable</p>
+                <button class="vote-btn" data-role="secretary" data-candidate="2">Vote</button>
+            </div>
+            <div class="candidate" id="secretary3">
+                <img src="https://via.placeholder.com/100" alt="Candidate 3">
+                <p>Candidate 3</p>
+                <p>Proven track record</p>
+                <button class="vote-btn" data-role="secretary" data-candidate="3">Vote</button>
+            </div>
+        </div>
+
+        <!-- Treasurer Role -->
+        <div class="role-section">
+            <h2>Treasurer</h2>
+            <div class="candidate" id="treasurer1">
+                <img src="https://via.placeholder.com/100" alt="Candidate 1">
+                <p>Candidate 1</p>
+                <p>Financially astute</p>
+                <button class="vote-btn" data-role="treasurer" data-candidate="1">Vote</button>
+            </div>
+            <div class="candidate" id="treasurer2">
+                <img src="https://via.placeholder.com/100" alt="Candidate 2">
+                <p>Candidate 2</p>
+                <p>Experienced in budgeting</p>
+                <button class="vote-btn" data-role="treasurer" data-candidate="2">Vote</button>
+            </div>
+            <div class="candidate" id="treasurer3">
+                <img src="https://via.placeholder.com/100" alt="Candidate 3">
+                <p>Candidate 3</p>
+                <p>Strong financial management</p>
+                <button class="vote-btn" data-role="treasurer" data-candidate="3">Vote</button>
+            </div>
+        </div>
+
+        <!-- Modal for Confirmation -->
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h3>Are you sure you want to vote?</h3>
+                <button id="confirm-vote">Yes</button>
+                <button id="cancel-vote">No</button>
+            </div>
+        </div>
+
+        <!-- Success Message -->
+        <div class="success-message" id="success-message">You have successfully voted!</div>
+    </div>
+export default Voting;

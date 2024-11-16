@@ -1,0 +1,134 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-theme {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+/* Container Styling */
+.settings-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 2px solid #039797; /* Teal border */
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.dark-theme .settings-container {
+    background-color: #444;
+    border-color: #026e6e; /* Darker teal for dark theme */
+}
+
+/* Heading Styling */
+h1 {
+    text-align: center;
+    color: #039797; /* Teal color */
+}
+
+.dark-theme h1 {
+    color: #66D1D1; /* Light teal for better contrast */
+}
+
+/* Menu Item Styling */
+.menu-item {
+    background-color: #039797; /* Teal background */
+    color: #ffffff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.menu-item:hover {
+    background-color: #026e6e; /* Darker teal on hover */
+}
+
+.dark-theme .menu-item {
+    background-color: #66D1D1; /* Lighter teal */
+}
+
+/* Menu Content Styling */
+.menu-content {
+    display: none;
+    background-color: #e0f7f5; /* Light teal for content */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.dark-theme .menu-content {
+    background-color: #555; /* Dark background for dark theme */
+}
+
+.menu-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-content li {
+    padding: 6px 0;
+    color: #333;
+}
+
+.dark-theme .menu-content li {
+    color: #f1f1f1; /* Light text for dark theme */
+}
+
+/* Toggle Switch Styling */
+.toggle-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.dark-theme .toggle-label {
+    color: #f1f1f1;
+}
+
+.toggle-label input {
+    display: none;
+}
+
+.slider {
+    width: 40px;
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 50px;
+    position: relative;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: #039797; /* Teal when enabled */
+}
+
+input:checked + .slider::before {
+    transform: translateX(20px);
+}

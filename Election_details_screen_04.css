@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Election Title Styling */
+.election-title {
+    margin-bottom: 20px;
+}
+
+.election-title h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.election-title p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #039797;
+}
+
+/* Election Container Styling */
+.election-container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.election-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Category Styling */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.category {
+    flex: 1;
+    border: 2px solid #039797;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #fff;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.category:hover {
+    background-color: #e0f7fa;
+    border-color: #02696f;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #039797;
+    padding-bottom: 5px;
+}
+
+/* Candidate Grid Styling */
+.candidate-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.candidate-box {
+    text-align: center;
+    border: 1px solid #039797;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f0f8ff;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.candidate-box:hover {
+    transform: scale(1.05);
+    background-color: #e0f7fa;
+}
+
+.candidate-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.candidate-box p {
+    margin: 5px 0;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+
+    .candidate-grid {
+        grid-template-columns: 1fr;
+    }
+}

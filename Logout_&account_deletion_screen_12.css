@@ -1,0 +1,139 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1; /* Light background for a clean, modern look */
+    color: #333;
+    padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Container Styling */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border: 2px solid #039797; /* Custom teal border */
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+}
+
+/* Heading Styling */
+h1 {
+    text-align: center;
+    color: #039797; /* Teal heading for emphasis */
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* Menu Item Styling */
+.menu-item {
+    background-color: #039797; /* Custom teal background */
+    color: #ffffff;
+    padding: 16px;
+    margin: 12px 0;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.menu-item:hover {
+    background-color: #027d74; /* Darker teal for hover effect */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Confirmation Box Styling */
+.confirmation-box {
+    display: none;
+    background-color: #e6f9f3; /* Light teal background */
+    border: 1px solid #039797; /* Matching border with teal color */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.confirm-button {
+    background-color: #039797; /* Teal background */
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.confirm-button:hover {
+    background-color: #027d74; /* Darker teal for hover */
+    transform: scale(1.05);
+}
+
+.cancel-button {
+    background-color: #f44336; /* Red background for cancel button */
+    color: #ffffff;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.cancel-button:hover {
+    background-color: #e53935; /* Darker red for hover */
+    transform: scale(1.05);
+}
+
+/* Additional Information Section */
+.additional-info {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray for additional info background */
+    border-top: 2px solid #ddd;
+}
+
+.additional-info h2 {
+    color: #039797; /* Teal heading for consistency */
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.additional-info p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Transition Effects for Containers and Buttons */
+.container, .menu-item, .confirmation-box {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-item:hover, .confirm-button:hover, .cancel-button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow effect on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .menu-item {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
